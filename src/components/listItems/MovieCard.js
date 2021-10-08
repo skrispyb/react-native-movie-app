@@ -1,9 +1,8 @@
 import { Box, Button, Divider, Heading, Image, Text, VStack } from 'native-base';
 import React from 'react';
-import ShowScreen from '../screens/ShowScreen';
 
 const MovieCard = props => {
-  const { image, title, relaese_date, popularity, navigation, overview } = props
+  const { image, title, release_date, popularity, navigation, overview } = props
 
   return (
     <Box mb={4}>
@@ -14,17 +13,17 @@ const MovieCard = props => {
         <Box ml={2} flexShrink={1}>
           <Heading size='xs'>{title}</Heading>
           <Text fontSize={12}>Popularity: {popularity}</Text>
-          <Text fontSize={12}>Release Date: {relaese_date}</Text>
+          <Text fontSize={12}>Release Date: {release_date}</Text>
           <Button
             backgroundColor='#0AF'
             width='100%'
             onPress={() =>
-              navigation.navigate(component={ShowScreen}, {
-                title,
-                image,
-                overview,
-                popularity,
-                relaese_date
+              navigation.navigate('Show', {
+                title: title,
+                image: image,
+                overview: overview,
+                popularity: popularity,
+                release_date: release_date
               })
             }
           >

@@ -1,13 +1,15 @@
 import React from 'react';
-import { Box, Center, Text } from 'native-base';
+import { Box, Center, Text, Image } from 'native-base';
 
-const MovieContainer = ({ title }) => {
-
+const MovieContainer = ({ title, image, overview, popularity, release_date }) => {
   return (
     <>
       <Box width='100%'>
         <Center py={10}>
-          <Text>{title}</Text>
+          <Text fontSize={24} fontWeight='700'>{title}</Text>
+          <Image mt={10} alt={title} source={{ uri: `http://image.tmdb.org/t/p/w500${image}` }} size={'2xl'} />
+          <Text px={10} mt={5}>{overview}</Text>
+          <Text mt={5} fontWeight='600' fontSize={12}>Popularity: {popularity} | Release Date: {release_date}</Text>
         </Center>
       </Box>
     </>

@@ -15,7 +15,7 @@ const MoviesList = ({ navigation, moviesOfType }) => {
             image={item.poster_path}
             title={item.title ? item.title : item.name}
             overview={item.overview}
-            relaese_date={item.release_date ? item.release_date : item.first_air_date}
+            release_date={item.release_date ? item.release_date : item.first_air_date}
             popularity={item.popularity}
         />
         )}
