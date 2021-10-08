@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Loading from '../layout/Loading';
 import MoviesList from '../lists/MoviesList';
 
-const MoviesContainer = ({ navigation, selectedMovieFilter, moviesOfType }) => {
+const MoviesContainer = ({ navigation, moviesOfType }) => {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
